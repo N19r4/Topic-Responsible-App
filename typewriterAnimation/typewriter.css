@@ -1,0 +1,25 @@
+#typewriter:after {
+  content: "_";
+  -webkit-animation: blink 250ms steps(2, end) infinite alternate;
+          animation: blink 250ms steps(2, end) infinite alternate;
+  color: limegreen;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=typewriter.css.map */

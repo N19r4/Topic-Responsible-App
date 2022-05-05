@@ -1,0 +1,324 @@
+$basicColor: limegreen;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    user-select: none;
+}
+body
+{
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    padding: 3rem;
+    height: 100vh;
+    background: repeating-linear-gradient(rgb(29, 29, 29), rgb(12, 12, 12));
+}
+#cover
+{
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0px 0px 5rem 1.5rem black ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+}
+#invaders-field, .invadersGroup
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.invader
+{
+    background-image: url(invader.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: 1vw;
+    // position: relative;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    transition: 1s;
+     
+}
+.invadersGroup
+{
+    margin: .5vw;
+    animation: fly 2.5s ease-in-out 0s infinite alternate;
+}
+.text, .block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;  
+}
+.text
+{
+    z-index: 200;
+}
+.block
+{
+    color: white;
+    width: 30%;
+    height: 50vh;
+}
+h1
+{
+    color: $basicColor;
+    text-align: center;
+    font-size: 3rem;
+}
+h2, h1
+{
+    opacity: 1;
+    text-transform: uppercase;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .4rem;
+    font-weight: 100;
+    margin-bottom: 1.2vw;
+}
+p, #score, .like-p
+{
+    opacity: 1;
+    text-align: justify;
+    color: $basicColor;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+.like-p
+{
+    font-weight: bold;
+}
+.color-invert
+{
+    background-color: $basicColor;
+    color: rgb(19, 19, 19);
+    padding: 1px;
+}
+#score
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.text
+{
+    // opacity: 0;
+    // transition: .5s;
+    animation: fadeIn 2s ease-in 0s;
+}
+#ship-field
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#ship
+{
+    background-image: url(ship.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4vw;
+    height: 4vw;
+    transition-duration: .03s;
+    transition-timing-function: ease;
+}
+.bullet
+{
+    width: 3px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    animation: hit .8s ease 0s;
+}
+.end-game
+{
+    width: 20vw;
+    height: 10vw;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 3px $basicColor;
+    background-color: rgb(22, 22, 22);
+    color: $basicColor;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    animation: fadeIn 1s ease-in 0s;
+    z-index: 110;
+    display: none;
+}
+h3
+{
+    font-size: 2rem;
+    margin-bottom: 2vw;
+}
+a
+{
+    text-decoration: none;
+    color: $basicColor;
+    font-size: 1.5rem;
+}
+.arrowButton, .spaceButton
+{
+    width: 3vw;
+    height: 3vw;
+    border: solid 3px $basicColor;
+    color: $basicColor;
+    text-align: center;
+    // padding: 6px;
+    // margin: 5px;
+    padding: .5vw;
+    margin: .3vw;
+    
+    animation: buttonsShadow .8s steps(2, end) 0s infinite alternate, fadeInOut 10s ease-out 0s forwards;
+}
+.spaceButton
+{
+    width: 10vw;
+}
+#arrows-field
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 95%;
+    left: 8vw;
+    transform: translate(-20%, -90%);
+}
+@keyframes fly
+{
+    0% {
+        transform: translate(20px);
+    }
+    50% {
+        transform: translate(0,-10px)
+    }
+    100% {
+        transform: translate(-20px);
+    }
+}
+
+@keyframes fadeInOut
+{
+    0%, 100% {
+        opacity: 0%;
+    }
+    10%, 90% {
+        opacity: 100%;
+    }
+}
+@keyframes fadeIn
+{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes hit
+{
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(0,-1000px);
+    }
+}
+
+@keyframes buttonsShadow
+{
+    from {
+        transform: translate(0,0);
+        box-shadow: none;
+    }
+    to {
+        box-shadow: 4px 4px $basicColor;        
+        transform: translate(-5px,-5px);
+    }
+}
+
+@keyframes glitch
+{
+    0% {
+        filter: invert(50%);
+    }
+    5% {
+        filter: invert(0%);
+    }
+    10% {
+        filter: invert(80%);
+    }
+    15% {
+        filter: invert(0%);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1, h2, h3
+    {
+        font-size: 1rem;
+    }
+    p, a, .like-p
+    {
+        font-size: .8rem;
+    }
+}
+
+#secret
+{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    #secret
+    {
+        display: block;
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        background-image: url(OpenMeOnPC.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    div, p, h1, h2, h3, span, a
+    {
+        display: none;
+    }
+    body
+    {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+}

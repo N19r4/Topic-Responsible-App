@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="typewriterAnimation/typewriter.css">
+    <link rel="icon" href="invader.png" type="image/icon type">
+    <title>Aplikacja na TRa</title>
+</head>
+<body>
+    <div id="secret"></div>
+    <div id="cover"></div>
+    <div class="end-game">
+        <h3>Continue?</h3>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: underline;" target="_blank">YES</a>
+        <a href="https://youtu.be/LQQvOECCXyE" target="_blank">NO</a>
+    </div>
+        <h1 id="typewriter">Aplikacja na TRa</h1>
+        <div id="score">Score: <span id="points"></span></div>
+        <div id="invaders-field">
+            <div class="block">
+                <div class="text t1">
+                    <h2>Kim byłam...</h2>
+                <p>Jestem po <span class="color-invert">mat-fiz-infie</span> w liceum. Od ponad 4 lat samodzielnie uczę się pisania stronek internetowych. Na informatyce było śmiesznie, bo nauczyciel nie potrafił uczyć (nie dziwota xd) do tego stopnia, że prowadziłam skrócone kursy c++, HTMLa i CSSa moim kolegom. Ale to nie jest tak, że nie było warto. Jedyny plus tego wszystkiego był taki, że wybrali mnie do konkursu, który <span class="color-invert">udało mi się wygrać,</span> robiąc to co umiem najlepiej – stronkę. To mój pierwszy sukces w IT. Dzięki informatyce rozwinęłam swoje umiejętności logicznego myślenia, jak i znajdowania rozwiązań różnych problemów. Dowiedziałam się na szkoleniach o pracy w firmie, o agile, scrum, pracy pod presją czasu, ukończyłam <span class="color-invert">kurs na testera manualnego</span> (certyfikat <a href="certyfikat.jpg" target="_blank" class="like-p">tutaj</a>), nauczyłam się pisać przypadki testowe…</p>
+                </div>
+                <div class="invadersGroup" style="animation-delay: .1s;">
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="text t2">
+                    <h2>Kim jestem...</h2>
+                <p>Nazywają mnie <span class="color-invert">Cukinią</span> Określam siebie jako <span class="color-invert">geeka</span> i zajawkowicza - kocham gry komputerowe, zarówno samo granie, jak i ich tworzenie (no dobra, może żadnej pełnoprawnej gry jeszcze nie stworzyłam ale… uczę się, by kiedyś móc - to moje największe marzenie). Jestem fanką lat 80 ubiegłego wieku, planszówkomaniakiem, stronko-makerem i wymyślaczem zagadek. Czasem <span class="color-invert">niestandardowe</span> pomysły na coś (np. tę apkę) przychodzą mi niespodziewanie i co ciekawe, od razu z instrukcją wykonania. Jeśli wiem, że coś jest możliwe – po prostu szukam rozwiązania do skutku. Wszystko, co tworzę musi być sensowne, dopieszczone (tę apkę robiłam sama, wraz z projektem, wykonaniem, testowaniem i nadal wiem, że mogą być błędy, tak :v) i interesujące dla odbiorcy. Inspiruję się głównie mechanikami z gierek niezależnych i wykorzystuję je do swoich projektów.</p>
+                </div>
+                <div class="invadersGroup" style="animation-delay: .5s;">
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="text t3">
+                    <h2>Kim chcę być...</h2>
+                <p>Po co właściwie to wszystko piszę? Bo <span class="color-invert">to moja apka na TR-owca.</span> Połączenie wymyślania zadań i testowania to jak połączenie gorącej czekolady z lodami - <span class="color-invert">zajebiste!</span> Uwielbiam fakać system, uwielbiam poprawiać, uwielbiam wymyślać nowe rozwiązania. Dlaczego EBEC? Cóż... od czegoś trzeba zacząć jako świeżak :D Konkurs inżynierski, w którym trzeba sprostać konkretnemu zadaniu  brzmi bardzo ciekawie, zwłaszcza, że to ja te zadania będę im wymyślać xD Tu jeszcze wrzucam linki do różnych projektów wg mojego pomysłu: <a href="https://prezi.com/i/mc7esdzgzywz/" target="_blank" class="like-p">prezka</a>, <a href="https://codekiddo.000webhostapp.com/Stargazing/" target="_blank" class="like-p">stronka#1</a>, <a href="https://codekiddo.000webhostapp.com/NowaNadzieja/" target="_blank" class="like-p">stronka#2</a>, którą robiłam na ŚFN 2020, by potem móc ją na nim pokazać jako wystawca.
+                </p>
+                </div>
+                <div class="invadersGroup" style="animation-delay: .3s;">
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                    <div class="invader"></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div id="ship-field">
+            <div id="ship">
+            </div>
+        </div>
+        <div id="arrows-field">
+            <div class="arrowButton"> &#8592; </div>
+            <div class="spaceButton" style="animation-delay: .3s;"></div>
+            <div class="arrowButton" style="animation-delay: .6s;"> &#8594; </div>
+        </div>
+    <script src="script.js"></script>
+    <script src="typewriterAnimation/typewriter.js"></script>
+</body>
+</html>
