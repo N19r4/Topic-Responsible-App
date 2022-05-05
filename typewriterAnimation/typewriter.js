@@ -1,3 +1,4 @@
+//this typewriter code isn't mine
 
 function setupTypewriter(t) {
 var HTML = t.innerHTML;
